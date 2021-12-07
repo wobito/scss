@@ -299,7 +299,7 @@ jobs:
       - name: Generate oci artifact SBOM
         uses: anchore/sbom-action@v0
         with:
-          image: skifdh/test@${{ needs.build.outputs.image_digest }}
+          image: adrianwobito/sbomtest@${{ needs.build.outputs.image_digest }}
           artifact-name: oci-sbom.spdx
           registry-username: ${{ secrets.DOCKER_USERNAME }}
           registry-password: ${{ secrets.DOCKER_PASSWORD }}
